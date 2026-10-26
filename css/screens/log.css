@@ -1,0 +1,10 @@
+/* ---------- log ---------- */
+.ev{display:grid;grid-template-columns:64px 112px 1fr auto;gap:10px;align-items:center;padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ev .tm{font:700 12px var(--body);color:var(--dim);font-variant-numeric:tabular-nums}
+.ev .tx{min-width:0}
+.ev .sec{display:block;font-size:12px;color:#ffb3c1;margin-top:2px}
+.ev .sec::before{content:"🔒 ";}
+.ev.priv{background:linear-gradient(90deg,rgba(255,46,77,.06),transparent)}
+.ev .av{--s:26px;box-shadow:0 0 0 2px #000}
+.compact .ev{grid-template-columns:56px 1fr auto}
+.compact .ev .ty{display:none}

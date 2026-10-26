@@ -1,0 +1,15 @@
+/* ---------- figures ---------- */
+.fcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(460px,1fr));gap:16px}
+.fcard{display:grid;grid-template-columns:150px 1fr;gap:16px;border-radius:10px;border:2px solid var(--line);background:linear-gradient(160deg,#1c1138,#0c0719);padding:14px;position:relative}
+.fcard.rec{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,225,77,.15),6px 6px 0 rgba(0,0,0,.55)}
+.fcard.rec::after{content:"";position:absolute;left:0;right:0;top:-2px;height:6px;border-radius:10px 10px 0 0;background:repeating-linear-gradient(-45deg,var(--yellow) 0 10px,#1a1300 10px 20px)}
+.fimg{width:150px;aspect-ratio:1;border-radius:10px;overflow:hidden;position:relative;cursor:pointer;border:2px solid var(--c);background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--c) 45%,transparent),#0b0618 70%)}
+.fimg img{width:100%;height:100%;object-fit:cover}
+.fimg .up{position:absolute;inset:auto 0 0 0;background:rgba(0,0,0,.7);font:800 10px var(--body);letter-spacing:.1em;text-align:center;padding:5px;opacity:0;transition:opacity .15s}
+.fimg:hover .up{opacity:1}
+.fbox{margin-top:10px;border-radius:8px;border:2px dashed var(--line);padding:10px;background:rgba(0,0,0,.25)}
+.fbox-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.fbox-h b{font:900 13px var(--display)}
+.bphoto{width:64px;height:64px;border-radius:8px;overflow:hidden;border:2px solid var(--line);display:grid;place-items:center;cursor:pointer;color:var(--dim);font-size:10px;text-align:center;flex:none}
+.bphoto img{width:100%;height:100%;object-fit:cover}
+.fl2{display:grid;grid-template-columns:1fr 1fr;gap:8px}

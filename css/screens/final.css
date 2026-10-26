@@ -1,0 +1,49 @@
+/* ---------- final ---------- */
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.step{flex:1;min-width:150px;border:2px solid var(--line);background:var(--panel);padding:10px 14px;border-radius:6px;cursor:pointer;transform:skew(-8deg);text-align:left}
+.step>div{transform:skew(8deg)}
+.step .sn{font:900 22px var(--display);color:var(--dim)}
+.step .st{font:800 12px var(--body);text-transform:uppercase;letter-spacing:.05em}
+.step.on{border-color:var(--pink);background:linear-gradient(90deg,rgba(255,62,165,.25),var(--panel));box-shadow:4px 4px 0 #000}
+.step.on .sn{color:var(--pink)}
+.chooser{text-align:center;padding:26px}
+.chooser .who{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 20px}
+.chooser .who .av{--s:70px}
+.chooser .who b{font:900 30px var(--display)}
+.bpick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.bpick button{border:3px solid var(--c);background:color-mix(in srgb,var(--c) 14%,#0c0719);border-radius:10px;padding:16px 8px;cursor:pointer;transition:transform .12s}
+.bpick button:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 8px 24px color-mix(in srgb,var(--c) 40%,transparent)}
+.bpick button:disabled{opacity:.3;cursor:not-allowed;filter:grayscale(1)}
+.bpick .r{font:900 34px var(--display);color:var(--c);display:block}
+.bpick .cap{font:800 12px var(--body);color:var(--muted)}
+.bcols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.bcol{border-radius:10px;border:2px solid var(--c);padding:12px;background:color-mix(in srgb,var(--c) 7%,#0c0719);min-height:120px}
+.bcol h3{font-size:13px;gap:6px;color:var(--c);display:flex;justify-content:space-between;margin-bottom:8px}
+.bcol .m{display:flex;align-items:center;gap:8px;padding:5px 0}
+.bcol .m .av{--s:28px}
+.olist .o{display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:6px;border:2px solid transparent}
+.olist .o.cur{border-color:var(--pink);background:rgba(255,62,165,.1)}
+.olist .o .av{--s:32px}
+.olist .o .pn{font:900 16px var(--display);width:28px;color:var(--dim)}
+.olist .o select{width:auto;padding:4px 6px}
+.prefs{display:flex;gap:6px;flex-wrap:wrap}
+.pref{display:flex;align-items:center;border:2px solid var(--c);border-radius:8px;overflow:hidden;background:#0c0719}
+.pref b{font:900 16px var(--display);padding:4px 9px;color:var(--c)}
+.pref small{font-size:10px;color:var(--dim);padding-left:6px}
+.pref button{border:0;background:rgba(255,255,255,.06);width:24px;align-self:stretch;cursor:pointer;color:var(--muted)}
+.pref button:hover{background:var(--c);color:#000}
+.reveal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.rcard{perspective:900px;height:330px;cursor:pointer}
+.rcard-in{position:relative;width:100%;height:100%;transition:transform .9s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.rcard.open .rcard-in{transform:rotateY(180deg)}
+.rface{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;border:2px solid var(--line);padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;overflow:hidden;background:linear-gradient(160deg,#1c1138,#0a0516)}
+.rface.back{transform:rotateY(180deg);border-color:var(--c);background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--c) 40%,transparent),#0a0516 70%)}
+.rface .av{--s:64px}
+.rface .pnum{font:900 44px var(--display);color:transparent;-webkit-text-stroke:2px var(--c)}
+.rface .fimgL{width:150px;height:150px;border-radius:50%;overflow:hidden;border:3px solid var(--c);box-shadow:0 0 40px var(--c)}
+.rface .fimgL img{width:100%;height:100%;object-fit:cover}
+.rface .fname{font:900 16px var(--display)}
+.rcard.open .rface.back::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,var(--c),transparent 30%,var(--pink),transparent 60%,var(--blue),transparent);animation:spin 3s linear infinite;opacity:.25}
+.rcard.open .rface.back>*{position:relative}
+.rface .fimgL.full{width:auto;height:190px;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.rface .fimgL.full img{width:auto;height:100%;object-fit:contain;filter:drop-shadow(0 0 18px var(--c))}

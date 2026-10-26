@@ -1,0 +1,23 @@
+/* ---------- players ---------- */
+.pcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:16px}
+.pcard{position:relative;border-radius:10px;border:2px solid var(--line);background:linear-gradient(165deg,color-mix(in srgb,var(--c) 14%,#170d2e),#0b0617 70%);padding:16px;box-shadow:6px 6px 0 rgba(0,0,0,.55);overflow:hidden}
+.pcard::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.pcard .rank{position:absolute;right:12px;top:8px;font:900 40px/1 var(--display);color:rgba(255,255,255,.2)}
+.pcard .rank.r1{color:var(--yellow);text-shadow:0 0 16px rgba(255,225,77,.4)}
+.pcard-top{display:flex;gap:14px;align-items:center;margin-bottom:14px;padding-right:50px}
+.pcard-top .av{--s:62px}
+.pcard-top .pname{font:900 18px var(--display);line-height:1.1}
+.pts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.pt{border-radius:8px;padding:8px 10px;background:rgba(0,0,0,.35);border:2px solid var(--line)}
+.pt .l{font:800 10px var(--body);letter-spacing:.14em;color:var(--muted)}
+.pt .v{font:900 30px/1.05 var(--display)}
+.pt.rp .v{color:var(--pink)}.pt.ep .v{color:var(--blue)}
+.pt.neg .v{color:var(--red)}
+.qbtns{display:flex;gap:4px;margin-top:6px}
+.qbtns button{flex:1;min-width:0;border:1.5px solid var(--line);background:#0c0719;border-radius:5px;padding:4px 0;font:800 11px var(--body);cursor:pointer}
+.pt.rp .qbtns button:hover{border-color:var(--pink);background:rgba(255,62,165,.18)}
+.pt.ep .qbtns button:hover{border-color:var(--blue);background:rgba(46,197,255,.18)}
+.pcard .meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.pcard .acts{display:flex;gap:6px}
+.pop{animation:pop .5s}
+@keyframes pop{30%{transform:scale(1.25);text-shadow:0 0 16px currentColor}}

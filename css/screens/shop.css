@@ -1,0 +1,19 @@
+/* ---------- shop ---------- */
+.cat{margin-bottom:26px}
+.cat-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.cat-h .ic{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#000;box-shadow:3px 3px 0 #000}
+.cat-h .ic svg{width:22px;height:22px}
+.cat-h h2{font-size:20px;text-transform:uppercase}
+.acards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.acard{position:relative;border-radius:10px;padding:16px;border:2px solid var(--line);background:linear-gradient(160deg,#1c1138,#0c0719);display:flex;flex-direction:column;gap:10px;overflow:hidden;transition:transform .15s}
+.acard:hover{transform:translateY(-3px) rotate(.3deg);border-color:var(--c)}
+.acard>.row:first-of-type{padding-right:44px}
+.acard .stamp{position:absolute;right:-34px;top:16px;transform:rotate(35deg);background:var(--yellow);color:#000;font:900 10px var(--body);letter-spacing:.14em;padding:3px 38px}
+.acard .aic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 25%,#000);border:2px solid var(--c);color:var(--c)}
+.acard .aic svg{width:28px;height:28px}
+.acard b{font:900 15px var(--display)}
+.acard .price{font:900 22px var(--display);color:var(--blue)}
+.acard .lim{font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.acard.locked{opacity:.6}
+.acard .fig{width:52px;height:52px;border-radius:14px;overflow:hidden;border:2px solid var(--c);background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--c) 45%,transparent),#0b0618 75%)}
+.acard .fig img{width:100%;height:100%;object-fit:cover}

@@ -1,0 +1,26 @@
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,rgba(7,4,15,.96),rgba(7,4,15,.85));backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:linear-gradient(90deg,var(--red),var(--pink),var(--violet),var(--blue))}
+body.demo .top::after{background:repeating-linear-gradient(90deg,var(--blue) 0 30px,var(--green) 30px 60px)}
+.top-in{max-width:1400px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.logo{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff5a72,var(--red) 45%,#6b0016);display:grid;place-items:center;box-shadow:0 0 18px rgba(255,46,77,.6),inset 0 0 0 2px #000}
+.logo svg{width:32px;height:32px}
+.brand-t{font:900 14px/1.1 var(--display);letter-spacing:.02em;text-transform:uppercase}
+.brand-s{font-size:12px;color:var(--muted);margin-top:4px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.tab{border:0;background:transparent;padding:8px 11px;font:700 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);cursor:pointer;position:relative;transform:skew(-10deg);border-radius:3px}
+.tab>span{display:inline-block;transform:skew(10deg)}
+.tab:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.tab.on{color:#fff;background:linear-gradient(90deg,var(--red),var(--pink));box-shadow:3px 3px 0 #000}
+.tab.locked{opacity:.4}
+.top-actions{display:flex;gap:8px;align-items:center}
+.modesw{display:flex;align-items:center;gap:10px;border:2px solid var(--red);padding:6px 12px 6px 8px;border-radius:999px;cursor:pointer;background:rgba(255,46,77,.12);font:800 12px var(--body);text-transform:uppercase;letter-spacing:.06em}
+.modesw .dot{width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red)}
+body.demo .modesw{border-color:var(--green);background:rgba(61,255,154,.12)}
+body.demo .modesw .dot{background:var(--green);box-shadow:0 0 10px var(--green);animation:blink 1.4s infinite}
+.demo-banner{display:none;position:relative;z-index:1;text-align:center;padding:6px;font:800 12px var(--body);letter-spacing:.2em;text-transform:uppercase;color:#001a0d;background:repeating-linear-gradient(-45deg,var(--green) 0 18px,#2bdc85 18px 36px)}
+body.demo .demo-banner{display:block}
+.iconbtn{width:38px;height:38px;border-radius:10px;border:2px solid var(--line);background:var(--panel);display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.iconbtn:hover{color:var(--ink);border-color:var(--violet)}
+.iconbtn svg{width:18px;height:18px}

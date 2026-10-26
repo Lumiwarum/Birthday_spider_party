@@ -1,0 +1,16 @@
+:root{
+  --bg:#07040f; --panel:#120a24; --panel2:#1a1033; --line:#2c1f4f; --ink:#f6efff; --muted:#a99bc8; --dim:#6f6194;
+  --red:#ff2e4d; --pink:#ff3ea5; --violet:#8a3ffc; --blue:#2ec5ff; --yellow:#ffe14d; --green:#3dff9a; --orange:#ff8a00;
+  --display:'Unbounded','Arial Black',Impact,sans-serif; --body:'Manrope','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--body);min-height:100vh;overflow-x:hidden;
+  background-image:radial-gradient(1200px 600px at 10% -10%,rgba(138,63,252,.35),transparent 60%),radial-gradient(900px 600px at 110% 10%,rgba(255,46,77,.25),transparent 60%),radial-gradient(900px 700px at 50% 120%,rgba(46,197,255,.18),transparent 60%);background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.13;
+  background-image:radial-gradient(circle,#fff 1px,transparent 1.4px);background-size:7px 7px;
+  -webkit-mask:linear-gradient(135deg,#000 0%,transparent 35%,transparent 65%,#000 100%);mask:linear-gradient(135deg,#000 0%,transparent 35%,transparent 65%,#000 100%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.05;background:repeating-linear-gradient(-55deg,#fff 0 1px,transparent 1px 22px)}
+button,input,select,textarea{font:inherit;color:inherit}
+img{display:block;max-width:100%}
+.wrap{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:0 20px 60px}
